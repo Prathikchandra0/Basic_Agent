@@ -21,35 +21,6 @@ This project demonstrates the **core mechanism behind tool-calling AI agents**.
 
 Instead of hardcoding which Python function should run, the LLM analyzes the user's request, selects the appropriate tool, generates the required arguments, and the Python program dynamically executes the selected function.
 
-### Example
-
-```text
-User
- │
- │  "95 + 5"
- ▼
-┌──────────────────────┐
-│        LLM           │
-│   Tool Selection     │
-└──────────┬───────────┘
-           │
-           │ Calculator
-           │ {"expression":"95 + 5"}
-           ▼
-┌──────────────────────┐
-│   Tool Registry      │
-│                      │
-│ Calculator()         │
-│ get_weather()        │
-└──────────┬───────────┘
-           │
-           ▼
-        100
-```
-
-The important part is that the application **doesn't need to know beforehand which tool the user will require**.
-
----
 
 # ✨ Features
 
